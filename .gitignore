@@ -1,0 +1,10 @@
+# 忽略所有.DS_Store
+.DS_Store
+# 忽略vscode 工作台
+*.code-workspace
+# 忽略Folder Icon
+Icon?
+# 忽略sh
+clear.sh
+# 忽略GoogleService-Info.plist
+**/GoogleService-Info.plist

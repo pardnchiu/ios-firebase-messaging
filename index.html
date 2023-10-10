@@ -1,0 +1,145 @@
+<!-- 
+
+	Copyright 2023 Pardn Ltd 帕登國際有限公司.
+	Created by Pardn Chiu 邱敬幃.
+	Email: mail@pardn.ltd
+	
+ -->
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-capable" content="no">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="theme-color" content="#ffffff">
+        <meta name="robots" content="index follow">
+        <!--  -->
+        <title>Firebase Messaging iOS | 邱敬幃 Pardn Chiu | GitHub.io</title>
+        <meta name="title" content="Firebase Messaging iOS | 邱敬幃 Pardn Chiu | GitHub.io">
+        <meta name="description" content="Firebase 即時訊息 (iOS) 實作範例 | 帕登數位科技有限公司">
+        <!-- -->
+        <meta name="author" content="邱敬幃 Pardn Chiu">
+        <link rel="author" href="https://pardn.io">
+        <link rel="canonical" href="https://pardnchiu.github.io/firebase-messaging-ios/">
+        <meta name="referrer" content="unsafe-url">
+        <meta name="copyright" content="© 2023 帕登數位科技有限公司 Pardn Ltd">
+        <!-- Facebook -->
+        <meta property="og:title" content="Firebase Messaging iOS | 邱敬幃 Pardn Chiu | GitHub.io">
+        <meta property="og:description" content="Firebase 即時訊息 (iOS) 實作範例 | 帕登數位科技有限公司">
+        <meta property="og:image" content="https://pardn.io/image/repo/firebase-messaging-ios.jpg">
+        <meta property="og:url" content="https://pardnchiu.github.io/firebase-messaging-ios/">
+        <meta property="og:site_name" content="Pardn Chiu 的 Github Page">
+        <meta property="og:type" content="website">
+        <!-- Twitter -->
+        <meta property="twitter:title" content="Firebase Messaging iOS | 邱敬幃 Pardn Chiu | GitHub.io">
+        <meta property="twitter:description" content="Firebase 即時訊息 (iOS) 實作範例 | 帕登數位科技有限公司">
+        <meta property="twitter:image" content="https://pardnchiu.github.io//image/repo/firebase-messaging-ios.jpg">
+        <meta property="twitter:url" content="https://pardnchiu.github.io/firebase-messaging-ios/">
+        <!-- Google -->
+        <meta name="google-site-verification" content="YQQ2f6AchR8dcb55Az2BYd_mw4TrP0J1RApD-v2v65Y">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5VYEZPVXX"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-L5VYEZPVXX');
+        </script>
+        <!--  -->
+        <link rel="stylesheet" href="https://pardnchiu.github.io/css/index.css">
+        <!--  -->
+        <script src="https://pardnchiu.github.io/PDExtension-js/PDExtension.min.js" copyright="Pardn Ltd"></script>
+        <script src="https://pardnchiu.github.io/markdown-editor/js/PDMDEditor.min.js" copyright="Pardn Ltd"></script>
+        <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+    </head>
+
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #00000034;
+            text-align: center;
+        }
+
+        thead>tr:nth-child(2n) {
+            background-color: #0000000d;
+        }
+
+        tbody>tr:nth-child(2n - 1) {
+            background-color: #0000000d;
+        }
+    </style>
+
+    <body class="md">
+        <!-- <span class="loader"></span> -->
+        <nav id="nav">
+            <a href="https://github.com/pardnchiu" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <img class="head" src="https://pardn.io/image/head-s.jpg" alt="邱敬幃 Pardn Chiu"
+                onclick="window.open('https://linkedin.com/in/pardnchiu')">
+            <a href="mailto:mail@pardn.ltd">
+                <i class="fa-regular fa-envelope"></i>
+            </a>
+        </nav>
+        <script>
+            const viewer = new MDViewer({
+                delay: 0,
+                pre: `# Firebase Messaging
+
+<a href="https://hits.sh/github.com/pardnchiu/firebase-messaging-ios/"><img alt="Hits" src="https://hits.sh/github.com/pardnchiu/firebase-messaging-ios.svg?label=Hit"/></a> <img src="https://img.shields.io/github/repo-size/pardnchiu/firebase-messaging-ios?label=Size"> <img src="https://img.shields.io/github/license/pardnchiu/firebase-messaging-ios?label=License"> <img src="https://img.shields.io/badge/Developer-邱敬幃%20Pardn%20Chiu-A374BF">
+
+<br>
+
+***Add the GoogleService-Info.plist file manually before starting the testing.***
+
+Firebase Messaging iOS is a real-time messaging iOS application built from scratch using Firebase and Swift with pure code and the 'PDExtension (Swift Library).' 
+
+It includes features such as automatic QR code generation, scanning QR codes to add friends, and easy switching to dark mode in the app.
+
+|  |  |  |  |
+| - | - | - | - |
+| ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/login-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/signup-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/account-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/head-light.png) |
+| ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/qrcode-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/scanner-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/user-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/friend-light.png) |
+| ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/chat-list-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/chat-light.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/readme-light.png) | |
+| ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/login-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/signup-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/account-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/head-dark.png) |
+| ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/qrcode-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/scanner-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/user-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/friend-dark.png) |
+| ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/chat-list-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/chat-dark.png) | ![Firebase Messaging iOS - 邱敬幃 Pardn Chiu](./image/readme-dark.png) |
+
+## Languages & Tools
+
+![](https://skillicons.dev/icons?i=swift,firebase)
+
+## Feature
+
+- Accelerate development with  [PDExtension Swift](https://github.com/pardnchiu/PDExtension-swift).
+- Use [Userpics](https://userpics.craftwork.design) photos.
+
+## Contributor
+
+<img src="https://pardn.io/image/head-s.jpg" align=left width=100 height=100>
+
+### 邱敬幃 Pardn Chiu
+
+<a href="mailto:mail@pardn.ltd"><img src="https://pardn.io/image/mail.svg"></a>&nbsp<a href="https://linkedin.com/in/pardnchiu"><img src="https://skillicons.dev/icons?i=linkedin"></a>`
+            });
+
+            document.body.appendChild(viewer.body);
+
+            viewer.init();
+
+            viewer.body.addEventListener("scroll", function () {
+                "#nav".$.$$_class(this.scrollTop > 0, "min");
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Teamwork.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

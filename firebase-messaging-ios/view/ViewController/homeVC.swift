@@ -9,7 +9,7 @@ import FirebaseCore
 import FirebaseAuth
 import FirebaseDatabase
 
-var _auth			: [String:String] = [:];
+var _auth		: [String:String] 	= [:];
 var _friends	: [[String:Any]] 	= [];
 var _chats		: [[String:Any]] 	= [];
 var _archieve	: [[String:Any]] 	= [];

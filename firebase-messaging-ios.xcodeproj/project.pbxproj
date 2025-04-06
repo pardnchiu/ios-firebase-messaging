@@ -131,10 +131,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A3CB0522D087FED003A564B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1A7BF8552A08037A007F3BAC = {
 			isa = PBXGroup;
 			children = (
 				1A7BF8602A08037A007F3BAC /* firebase-messaging-ios */,
+				1A3CB0522D087FED003A564B /* Frameworks */,
 				1A7BF85F2A08037A007F3BAC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -517,6 +525,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FQQGN8Z5PN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Release-iphonesimulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "firebase-messaging-ios/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "開啟相機權限掃描QRCode";
@@ -546,6 +559,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FQQGN8Z5PN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Release-iphonesimulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "firebase-messaging-ios/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "開啟相機權限掃描QRCode";
